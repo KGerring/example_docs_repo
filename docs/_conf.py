@@ -21,6 +21,29 @@ extensions = [
     "sphinx_copybutton",
 ]
 
+_extensions = [
+    "sphinx.ext.napoleon",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.doctest",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.coverage",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.githubpages",
+    "sphinx.ext.autosectionlabel",
+    "sphinx_click",
+    "sphinx_copybutton",
+    "sphinx_design",
+    "myst_parser",
+    "sphinxawesome_theme.highlighting",
+]
+
+templates_path = ["_templates"]
+
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
+
 autosummary_generate = True
 autodoc_default_options = {
     "members": True,
