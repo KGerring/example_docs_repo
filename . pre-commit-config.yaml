@@ -1,0 +1,35 @@
+# .pre-commit-config.yaml
+
+- repo: https://github.com/pre-commit/mirrors-black
+  rev: v23.1.0
+  hooks:
+    - id: black
+      language_version: python3
+      exclude: ^docs/
+
+- repo: https://github.com/pre-commit/mirrors-flake8
+  rev: v6.0.0
+  hooks:
+    - id: flake8
+      args: ['--max-line-length=88']
+      exclude: ^docs/
+
+- repo: https://github.com/pre-commit/mirrors-isort
+  rev: v5.12.0
+  hooks:
+    - id: isort
+      exclude: ^docs/
+
+- repo: https://github.com/pre-commit/mirrors-pytest
+  rev: v4.0.1
+  hooks:
+    - id: pytest
+      files: tests/
+      additional_dependencies: ['pytest', 'pytest-cov']
+
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v1.2.0
+  hooks:
+    - id: mypy
+      files: myproject/
+      additional_dependencies: ['mypy']

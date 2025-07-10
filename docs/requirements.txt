@@ -1,0 +1,7 @@
+sphinx
+myst-parser
+myst-nb
+sphinx-autobuild
+sphinx-copybutton
+sphinx-click
+furo

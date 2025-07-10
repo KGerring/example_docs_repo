@@ -1,0 +1,10 @@
+[project]
+name = "myproject"
+version = "0.1.0"
+dependencies = [
+    "click",
+]
+
+[tool.setuptools.packages.find]
+where = ["myproject"]
+
